@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "12.0"
   spec.ios.deployment_target = '12.0'
   spec.source       = { :git => "https://github.com/xKhrizZ/iOSDataPersistence.git", :tag => spec.version.to_s }
-  spec.source_files  = "**/*.{h,swift}"
+  spec.source_files  = "iOSDataPersistence/**/*.{h,swift}"
   spec.resource_bundles = {'iOSDataPersistence' => ['iOSDataPersistence/**/*.xcdatamodeld']}
   spec.frameworks = 'Foundation', 'CoreData'
   spec.static_framework = true

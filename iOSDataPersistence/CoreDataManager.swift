@@ -39,46 +39,4 @@ public class CoreDataManager {
         try? persistentContainer.viewContext.save()
     }
     
-    func fetchMovie(with idSection: Int) -> Movie? {
-        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "%K == %@", argumentArray: ["id",idSection])
-        return try? persistentContainer.viewContext.fetch(fetchRequest).first
-    }
-    
-    func fetchMovieCount() -> Int? {
-        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
-        return try? persistentContainer.viewContext.fetch(fetchRequest).count
-    }
-    
-    func removeMovie(with idSection: Int) {
-        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "%K == %@", argumentArray: ["id",idSection])
-        
-        do {
-            guard let movie = try persistentContainer.viewContext.fetch(fetchRequest).first else {
-                return
-            }
-            
-            persistentContainer.viewContext.delete(movie)
-            try? persistentContainer.viewContext.save()
-        } catch let error {
-            print("Failed to delete move \(error)")
-        }
-    }
-    
-    func removeAllRecords() {
-        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: entitieName)
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
-        do
-        {
-            try persistentContainer.viewContext.execute(deleteRequest)
-            try persistentContainer.viewContext.save()
-        }
-        catch
-        {
-            print ("There was an error")
-        }
-        
-    }
-    
 }
