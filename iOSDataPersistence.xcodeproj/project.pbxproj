@@ -38,6 +38,10 @@
 		0944AD4427C04AC2001587BA = {
 			isa = PBXGroup;
 			children = (
+				0944AD5F27C0507A001587BA /* Movie+CoreDataClass.swift */,
+				0944AD6027C0507A001587BA /* Movie+CoreDataProperties.swift */,
+				0944AD6327C050C4001587BA /* CoreDataManager.swift */,
+				0944AD5C27C04F37001587BA /* CoreDataModel.xcdatamodeld */,
 				0944AD5027C04AC2001587BA /* iOSDataPersistence */,
 				0944AD4F27C04AC2001587BA /* Products */,
 			);
@@ -54,10 +58,6 @@
 		0944AD5027C04AC2001587BA /* iOSDataPersistence */ = {
 			isa = PBXGroup;
 			children = (
-				0944AD5F27C0507A001587BA /* Movie+CoreDataClass.swift */,
-				0944AD6027C0507A001587BA /* Movie+CoreDataProperties.swift */,
-				0944AD6327C050C4001587BA /* CoreDataManager.swift */,
-				0944AD5C27C04F37001587BA /* CoreDataModel.xcdatamodeld */,
 				0944AD5127C04AC2001587BA /* iOSDataPersistence.h */,
 				0981164427C07A4800CAC3FD /* Info.plist */,
 			);
