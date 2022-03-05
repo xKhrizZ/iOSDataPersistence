@@ -29,7 +29,9 @@ public class CoreDataManager {
         }
         return container
     }()
+     
     
+    /*
     func addMovie(with id: Int, with data: String) {
         let movie = NSEntityDescription.insertNewObject(forEntityName: entitieName, into: persistentContainer.viewContext)
         
@@ -38,7 +40,9 @@ public class CoreDataManager {
         
         try? persistentContainer.viewContext.save()
     }
+     */
     
+    /*
     func fetchMovie(with idSection: Int) -> Movie? {
         let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "%K == %@", argumentArray: ["id",idSection])
@@ -80,5 +84,6 @@ public class CoreDataManager {
         }
         
     }
+     */
     
 }
