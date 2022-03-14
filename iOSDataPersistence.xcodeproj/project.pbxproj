@@ -12,6 +12,7 @@
 		0944AD6127C0507A001587BA /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AD5F27C0507A001587BA /* Movie+CoreDataClass.swift */; };
 		0944AD6227C0507A001587BA /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AD6027C0507A001587BA /* Movie+CoreDataProperties.swift */; };
 		0944AD6427C050C4001587BA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AD6327C050C4001587BA /* CoreDataManager.swift */; };
+		5B8F574C54FDD6919618F933 /* Pods_iOSDataPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D706043A3516C05B246775 /* Pods_iOSDataPersistence.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0944AD6027C0507A001587BA /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0944AD6327C050C4001587BA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0981164427C07A4800CAC3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20F4AF161200908A3A9A1E5B /* Pods-iOSDataPersistence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDataPersistence.debug.xcconfig"; path = "Target Support Files/Pods-iOSDataPersistence/Pods-iOSDataPersistence.debug.xcconfig"; sourceTree = "<group>"; };
+		53F3480A424B1C5D71577169 /* Pods-iOSDataPersistence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDataPersistence.release.xcconfig"; path = "Target Support Files/Pods-iOSDataPersistence/Pods-iOSDataPersistence.release.xcconfig"; sourceTree = "<group>"; };
+		85D706043A3516C05B246775 /* Pods_iOSDataPersistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDataPersistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8F574C54FDD6919618F933 /* Pods_iOSDataPersistence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				0944AD5027C04AC2001587BA /* iOSDataPersistence */,
 				0944AD4F27C04AC2001587BA /* Products */,
+				3EC578E4FEAFE05BC3221888 /* Pods */,
+				9BB1F3E6A0718BB7392C99C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = iOSDataPersistence;
 			sourceTree = "<group>";
 		};
+		3EC578E4FEAFE05BC3221888 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20F4AF161200908A3A9A1E5B /* Pods-iOSDataPersistence.debug.xcconfig */,
+				53F3480A424B1C5D71577169 /* Pods-iOSDataPersistence.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9BB1F3E6A0718BB7392C99C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85D706043A3516C05B246775 /* Pods_iOSDataPersistence.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -82,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0944AD5527C04AC2001587BA /* Build configuration list for PBXNativeTarget "iOSDataPersistence" */;
 			buildPhases = (
+				F2B8ECE448239375F0049B83 /* [CP] Check Pods Manifest.lock */,
 				0944AD4927C04AC2001587BA /* Headers */,
 				0944AD4A27C04AC2001587BA /* Sources */,
 				0944AD4B27C04AC2001587BA /* Frameworks */,
@@ -138,6 +164,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F2B8ECE448239375F0049B83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSDataPersistence-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0944AD4A27C04AC2001587BA /* Sources */ = {
@@ -278,6 +329,7 @@
 		};
 		0944AD5627C04AC2001587BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F4AF161200908A3A9A1E5B /* Pods-iOSDataPersistence.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +361,7 @@
 		};
 		0944AD5727C04AC2001587BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53F3480A424B1C5D71577169 /* Pods-iOSDataPersistence.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
